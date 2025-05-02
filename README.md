@@ -1,97 +1,105 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🚗 Vehicle Manager App
 
-# Getting Started
+Aplicativo mobile desenvolvido com **React Native CLI** para gerenciar o cadastro, listagem, edição, exclusão e filtragem de veículos, como parte da **Prova Substitutiva - Fase 4**.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 📱 Funcionalidades
 
-## Step 1: Start Metro
+- ✅ Cadastro de veículos (Placa, Marca, Modelo, Ano, Cor)
+- ✅ Listagem de veículos cadastrados
+- ✅ Filtros por **marca** e **ano**
+- ✅ Visualização detalhada de cada veículo
+- ✅ Edição dos dados do veículo
+- ✅ Exclusão de registros
+- ✅ Validação de campos obrigatórios no formulário
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 🧪 Tecnologias utilizadas
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- React Native CLI
+- TypeScript
+- React Navigation (Stack)
+- Axios
+- JSON Server (API simulada)
 
-```sh
-# Using npm
-npm start
+## 🧭 Navegação entre telas
 
-# OR using Yarn
-yarn start
+Foi utilizada a biblioteca **React Navigation** com o `createNativeStackNavigator` para gerenciar as seguintes rotas:
+
+- `HomeScreen`: listagem e filtros
+- `AddVehicleScreen`: formulário de cadastro
+- `VehicleDetailScreen`: detalhes de um veículo
+- `EditVehicleScreen`: edição e exclusão
+
+## 🧪 Validações
+
+O formulário de cadastro e edição exige preenchimento obrigatório de todos os campos. Se algum campo estiver vazio, o app impede o envio e mostra um alerta.
+
+## 🛠 Instalação e execução
+
+### Pré-requisitos:
+
+- Node.js
+- React Native CLI
+- Android Studio ou Xcode
+- CocoaPods (para iOS)
+- JSON Server
+
+### Passos:
+
+```bash
+git clone https://github.com/seu-usuario/vehicle-manager.git
+cd vehicle-manager
+npm install
+cd ios && pod install && cd ..
 ```
 
-## Step 2: Build and run your app
+### Rodar a API Fake (JSON Server)
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+Crie o arquivo `db.json` com o conteúdo:
 
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```json
+{
+  "vehicles": []
+}
 ```
 
-### iOS
+E inicie a API:
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```bash
+json-server --watch db.json --port 3000
 ```
 
-Then, and every time you update your native dependencies, run:
+### Executar no Android:
 
-```sh
-bundle exec pod install
+```bash
+npx react-native run-android
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+### Executar no iOS:
 
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+```bash
+npx react-native run-ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## 🎥 Demonstração em vídeo
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+👉 [Clique aqui para assistir ao vídeo de apresentação](https://link-do-video.com)
 
-## Step 3: Modify your app
+---
 
-Now that you have successfully run the app, let's make changes!
+## 📂 Estrutura de diretórios
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+```
+src/
+├── screens/
+│   ├── HomeScreen.tsx
+│   ├── AddVehicleScreen.tsx
+│   ├── EditVehicleScreen.tsx
+│   └── VehicleDetailScreen.tsx
+├── services/
+│   └── api.ts
+App.tsx
+```
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## 🧑‍💻 Autor
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Vinicius Santos**
