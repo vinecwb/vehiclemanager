@@ -1,0 +1,20 @@
+{
+  "vehicles": [
+    {
+      "id": "4516",
+      "placa": "OWH-3585",
+      "marca": "Chevrolet",
+      "modelo": "Celta",
+      "ano": "2002",
+      "cor": "Preto"
+    },
+    {
+      "id": "b8d5",
+      "placa": "SHS-5445",
+      "marca": "Volkswagen",
+      "modelo": "Gol",
+      "ano": "2020",
+      "cor": "Prata"
+    }
+  ]
+}
